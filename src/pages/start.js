@@ -40,7 +40,14 @@ const PhotoSection = styled(Section)`
     url(${props => props.src});
   background-position: center;
   background-size: cover;
-  ${props => props.fixed && { backgroundAttachment: 'fixed' }};
+  ${props =>
+    props.fixed &&
+    css`
+      background-attachment: scroll;
+      ${theme.mediaQueries.lg} {
+        background-attachment: fixed;
+      }
+    `};
   ${shadows};
 `
 PhotoSection.defaultProps = {
