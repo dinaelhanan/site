@@ -61,7 +61,7 @@ const Overlayer = styled(Box)`
 const Overlay = props => (
   <Fragment>
     <Overlayer {...props} />
-    <ScrollLock />
+    {/* <ScrollLock /> */}
   </Fragment>
 )
 
